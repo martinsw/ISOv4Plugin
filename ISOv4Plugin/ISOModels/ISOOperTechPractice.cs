@@ -46,7 +46,7 @@ namespace AgGateway.ADAPT.ISOv4Plugin.ISOModels
         public override List<IError> Validate(List<IError> errors)
         {
             RequireString(this, x => x.CulturalPracticeIdRef, 14, errors, "A");
-            RequireString(this, x => x.OperationTechniqueIdRef, 14, errors, "B");
+            ValidateString(this, x => x.OperationTechniqueIdRef, 14, errors, "B");
             return errors;
         }
     }
